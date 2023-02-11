@@ -15,7 +15,7 @@ st.set_page_config(
 )
 st.header('-------------欢迎使用!-阿强模型-------------')
 st.subheader('-------------选择好模型在上传照片！-------------')
-st.snow()
+# st.snow()
 
 # 侧边栏
 img = plt.imread('./img.jpeg')
@@ -150,7 +150,7 @@ while (img_!=None ):
             return  image
         #模型加载
 
-        model_weather = models.AlexNet(num_classes=4).cuda()
+        model_weather = models.AlexNet(num_classes=4)
 
         model_weather.load_state_dict(torch.load("weather.h5"))
         weather_dic ={0:'cloudy', 1:'rain', 2:'shine', 3:'sunrise'}
